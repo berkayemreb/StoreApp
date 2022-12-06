@@ -1,14 +1,20 @@
 import React from "react";
-import { SafeAreaView, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import styles from './Product.style';
-import INFO_PRODUCT_DATA from '../../info_product.json';
 
-const Product = () => {
+const Product = ({ product }) => {
 
     return (
-        <SafeAreaView>
-            <Text style={styles.text}>Deneme:{INFO_PRODUCT_DATA[0].title}</Text>
-        </SafeAreaView>
+        <View style={styles.container}>
+            <Image
+                style={styles.image}
+                source={{
+                    uri: product.imgURL,
+                }}
+            />
+            <Text>{product.title}</Text>
+            <Text>{product.price}</Text>
+        </View>
     )
 }
 
