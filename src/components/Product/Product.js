@@ -6,14 +6,19 @@ const Product = ({ product }) => {
 
     return (
         <View style={styles.container}>
-            <Image
-                style={styles.image}
-                source={{
-                    uri: product.imgURL,
-                }}
-            />
-            <Text>{product.title}</Text>
-            <Text>{product.price}</Text>
+            <View style={styles.container_of_image}>
+                <Image
+                    style={styles.image}
+                    source={{
+                        uri: product.imgURL,
+                    }}
+                />
+            </View>
+                <Text style={styles.product_title}>{product.title}</Text>
+                <View style={styles.view_of_priceAndStock}>
+                    <Text style={styles.product_price}>{product.price}</Text>
+                    <Text style={styles.controlStock_of_product}>{product.inStock ? '' : 'STOKTA YOK'}</Text>
+                </View>
         </View>
     )
 }
