@@ -3,6 +3,7 @@ import React from 'react';
 import { SafeAreaView, StyleSheet, FlatList, Text, View } from 'react-native';
 import Product from './components/Product';
 import INFOPRODUCTDATA from './info_product.json';
+import Search from './components/Search';
 
 const App = () => {
 
@@ -14,11 +15,14 @@ const App = () => {
     <SafeAreaView style={styles.contaniner}>
 
       <Text style={styles.app_title}>STORE APP</Text>
+
       <View style={styles.container_of_cards}>
         <FlatList
           numColumns={2}
           data={INFOPRODUCTDATA}
-          renderItem={renderProduct} />
+          renderItem={renderProduct}
+          ListHeaderComponent={<Search />}
+        />
       </View>
       <StatusBar style='auto' />
     </SafeAreaView>
