@@ -18,4 +18,4 @@ I coded a store mobile application where we can pull and display the products an
 According to the information in the JSON file, we can display the text " STOKTA YOK " on out of stock products.
 
 ----------------------
-*<div align="end"> - Author: [Berkay Emre BOĞUM](https://www.linkedin.com/in/berkay-emre-bo%C4%9Fum-058782240/) </div>*
+*<div align="end"> - Author: [Berkay Emre BOĞUM](https://www.linkedin.com/in/berkayemrebogum/) </div>*
